@@ -3,12 +3,12 @@
 def build_heap(data):  
     swaps = []
     n = len(data)
-    for i in range(n // 2-1,-1,-1):  
+    for i in range(n // 2 - 1, -1, -1):  
         m = i
         # heapifying node i
         while True:  #Lai neieciklētos
-            left = 2*m+1
-            right = 2*m+2
+            left = 2 * m + 1
+            right = 2 * m + 2
             min_inx = m
             if left < n and data[left] < data[min_inx]:  ##Sorting
                 min_inx = left
