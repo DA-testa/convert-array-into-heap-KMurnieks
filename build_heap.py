@@ -2,18 +2,18 @@
 #Kristaps Mūrnieks 221RDB173
 def heaping(data, i, swaps):
     d = len(data)
-    min = i
+    min_index = i
     left = 2*i +1
-    if left < d and data[left] < data[min]:
-        min = left
+    if left < d and data[left] < data[min_index]:
+        min_index = left
     right = 2*i + 2
-    if right < d and data[right] < data[min]:
-        min = right
+    if right < d and data[right] < data[min_index]:
+        min_index = right
     
     if i != min:
-        data[i], data[min] = data[min], data[i]
-        swaps.append((i, min))
-        heaping(data, min, swaps)
+        data[i], data[min] = data[min_index], data[i]
+        swaps.append((i, min_index))
+        heaping(data, min_index, swaps)
     return swaps
         
 def build_heap(data):
