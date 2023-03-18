@@ -1,23 +1,26 @@
 # python3
 #Kristaps Mūrnieks 221RDB173
-def build_heap(data):
+def build_heap(data):  
     swaps = []
     n = len(data)
-    for i in range(n // 2 - 1, -1, -1):
-        j = i
+    for i in range(n // 2-1,-1,-1):  
+        m = i
         # heapifying node i
-        while True:
-            left = 2 * j + 1
-            right = 2 * j + 2
-            min_inx = j
-            if left < n and data[left] < data[min_inx]:
+        while True:  #Lai neieciklētos
+            left = 2*m+1
+            right = 2*m+2
+            min_inx = m
+            if left < n and data[left] < data[min_inx]:  ##Sorting
                 min_inx = left
-            if right < n and data[right] < data[min_inx]:
+            if right < n and data[right] < data[min_inx]:##Sorting
+                min_inx = left
                 min_inx = right
-            if j != min_inx:
-                swaps.append((j, min_inx))
-                data[j], data[min_inx] = data[min_inx], data[j]
-                j = min_inx
+            if m != min_inx: ##Sorting
+                min_inx = left
+                swaps.append((m, min_inx))
+                data[m], data[min_inx] = data[min_inx], data[j] ##Sorting
+                min_inx = left
+                m = min_inx
             else:
                 break
     return swaps
@@ -59,3 +62,4 @@ def main():
         print(i, j)
 if __name__ == "__main__":
     main()
+#beigas :)
