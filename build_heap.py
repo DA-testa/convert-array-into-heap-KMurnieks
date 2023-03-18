@@ -39,7 +39,6 @@ def main():
         file = input()
         folder = filepath + file
         n = int(input())
-        with open(folder, 'r') as f:
             data = list(map(int, input().split()))
         assert len(data) == n
         
