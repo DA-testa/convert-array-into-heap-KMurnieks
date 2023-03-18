@@ -25,7 +25,7 @@ def build_heap(data):
     # try to achieve  O(n) and not O(n2)
     
     for i in range (x - 1, 0, -1):
-        data[0], data[i] = data[i, data[0]
+        data[0], data[i] = data[i], data[0]
         swaps.append((0,i))
         heaping(data, 0 , swaps)                        
     return swaps
