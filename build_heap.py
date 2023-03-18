@@ -39,7 +39,7 @@ def main():
         file = input()
         folder = filepath + file
         n = int(input())
-            data = list(map(int, input().split()))
+        data = list(map(int, input().split()))
         assert len(data) == n
         
     # TODO : add input and corresponding checks
