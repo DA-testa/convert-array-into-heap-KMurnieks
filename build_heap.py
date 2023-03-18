@@ -27,14 +27,14 @@ def build_heap(data):
             
             
 def main():
-    Input_type = input()
+    input_type = input()
     if input_type =='I':
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
         
            
-    elif Input_type == 'F':
+    elif input_type == 'F':
         filepath = './tests/'
         file = input()
         folder = filepath + file
