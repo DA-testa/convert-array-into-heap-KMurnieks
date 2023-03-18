@@ -17,7 +17,7 @@ def build_heap(data):
         smallest = i
         if left < d and data[left] < data[smallest]:
             smallest = left
-        if right < d and data[right] < data[smalleest]:
+        if right < d and data[right] < data[smallest]:
             smallest = right
         
         if smallest != i:
