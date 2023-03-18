@@ -7,13 +7,13 @@ def heaping(data, i, swaps):
     if left < d and data[left] > data [min]:
         max = left
     right = 2*i + 2
-    if right < d and data [right] < data [min]:
+    if right < d and data [right] > data [min]:
         max = right
     
     if i != min:
         data[i], data[min] = data[min], data[i]
-        swaps.append((i, max))
-        heaping(data, max, swaps)
+        swaps.append((i, min))
+        heaping(data, min, swaps)
     return swaps
         
 def build_heap(data):
