@@ -1,34 +1,25 @@
 # python3
 #Kristaps Mūrnieks 221RDB173
-def heaping(data, i, swaps):
-    d = len(data)
-    min_index = i
-    while True:
-        left = 2*i +1
-
-        if left < d and data[left] < data[min_index]:
-            min_index = left
-        right = 2*i + 2
-        if right < d and data[right] < data[min_index]:
-            min_index = right
-
-        if i != min_index:
-            data[i], data[min_index] = data[min_index], data[i]
-            swaps.append((i, min_index))
-            heaping(data, min_index, swaps)
-        else:
-            break
-    #return swaps
-        
-def build_heap(data):
-    x = len(data)
-    swaps = []
-    for i in range (x // 2, -1, -1):
-        swaps = swaps + heaping(data, i ,swaps)
-    # TODO: Creat heap and heap sort
-    # try to achieve  O(n) and not O(n2)
+def heaping(data):
+    n = len(data)
+    for i in range(n // 2 - 1, -1, -1):
+        j = i
+        # heapifying node i
+        while True:
+            left = 2 * j + 1
+            right = 2 * j + 2
+            min_index = j
+            if left < n and data[left] < data[min_index]:
+                min_index = left
+            if right < n and data[right] < data[min_index]:
+                min_index = right
+            if j != min_index:
+                swaps.append((j, min_index))
+                data[j], data[min_index] = data[min_index], data[j]
+                j = min_index
+            else:
+                break
     return swaps
-            
             
 def main():
     Input = input()
