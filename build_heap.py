@@ -1,6 +1,6 @@
 # python3
 #Kristaps Mūrnieks 221RDB173
-def heaping(data):
+def build_heap(data):
     swaps = []
     n = len(data)
     for i in range(n // 2 - 1, -1, -1):
