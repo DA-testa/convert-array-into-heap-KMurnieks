@@ -27,21 +27,20 @@ def build_heap(data):
             
             
 def main():
-    Input = input()
-    if "I" in Input:
+    Input_type = input()
+    if input_type =='I':
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
         
-        
-        
-        
-    elif "F" in Input:
+           
+    elif input_type == 'F':
         filepath = './tests/'
         file = input()
         folder = filepath + file
         n = int(input())
-        data = list(map(int, input().split()))
+        with open(folder, 'r') as f:
+            data = list(map(int, input().split()))
         assert len(data) == n
         
     # TODO : add input and corresponding checks
