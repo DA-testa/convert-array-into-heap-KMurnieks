@@ -5,10 +5,10 @@ def heaping(data, i, swaps):
     min = i
     left = 2*i +1
     if left < d and data[left] > data [min]:
-        max = left
+        min = left
     right = 2*i + 2
     if right < d and data [right] > data [min]:
-        max = right
+        min = right
     
     if i != min:
         data[i], data[min] = data[min], data[i]
