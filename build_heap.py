@@ -16,7 +16,6 @@ def build_heap(data):
                 min_inx = left
                 min_inx = right
             if m != min_inx: ##Sorting
-                min_inx = left
                 swaps.append((m, min_inx))
                 data[m], data[min_inx] = data[min_inx], data[m] ##Sorting
                 min_inx = left
