@@ -3,6 +3,7 @@
 def heaping(data, i, swaps):
     d = len(data)
     min_index = i
+    
     left = 2*i +1
     if left < d and data[left] < data[min_index]:
         min_index = left
@@ -22,7 +23,12 @@ def build_heap(data):
     for i in range (x // 2, -1, -1):
         swaps = swaps + heaping(data, i ,swaps)
     # TODO: Creat heap and heap sort
-    # try to achieve  O(n) and not O(n2)                     
+    # try to achieve  O(n) and not O(n2)
+    swaps_final = []
+    for i in range(len(swaps)):
+        k, j = swaps[i]
+        swaps_final.append((n-1-k, n-1-j))
+    
     return swaps
             
             
@@ -33,12 +39,14 @@ def main():
         data = list(map(int, input().split()))
         assert len(data) == n
 
-    elif "F" in Input:
+    if "F" in Input:
         filepath = "tests/" + input();
         with open(filepath, 'r') as file:
             n = int(file.readline().strip())
             data = list(map(int, file.readline().strip().split()))
             assert len(data) == n
+            
+            
                     
        # except Exception as ex:
            # print("Error:(", str(ex))
