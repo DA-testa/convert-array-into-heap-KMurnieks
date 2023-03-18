@@ -34,7 +34,7 @@ def main():
         assert len(data) == n
 
     elif "F" in Input:
-        filepath = './tests/'
+        filepath = "tests/"
         file = input()
         folder = filepath + file
         with open(folder, 'r') as x:
