@@ -4,10 +4,10 @@ def heaping(data, i, swaps):
     d = len(data)
     min_index = i
     left = 2*i +1
-    if left < d and data[left] > data[min_index]:
+    if left < d and data[left] < data[min_index]:
         min_index = left
     right = 2*i + 2
-    if right < d and data[right] > data[min_index]:
+    if right < d and data[right] < data[min_index]:
         min_index = right
     
     if i != min_index:
@@ -37,9 +37,9 @@ def main():
         filepath = "tests/"
         file = input()
         folder = filepath + file
-        with open(folder, 'r') as x:
-            n = int(x.readline().strip())
-            data = list(map(int, x.readline().strip().split()))
+        with open(folder, 'r') as z:
+            n = int(z.readline().strip())
+            data = list(map(int, z.readline().strip().split()))
             assert len(data) == n
                     
        # except Exception as ex:
