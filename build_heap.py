@@ -30,10 +30,8 @@ def main():
         assert len(data) == n
 
     if "F" in Input:
-        filepath = './tests/'  #Setting up the filepath / file etc.
-        fails = input()
-        folder = filepath + fails
-        with open(folder, 'r') as file:
+        filepath = "tests/" + input() 
+        with open(filepath, 'r') as file:
             n = int(file.readline().strip())
             data = list(map(int, file.readline().strip().split()))
             assert len(data) == n
