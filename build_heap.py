@@ -1,13 +1,14 @@
 # python3
+#Kristaps Mūrnieks 221RDB173
 def heaping(data, i):
     swaps = []
     left = 2*i+1
     right = 2 * i +2
     smallest = i
-     if left < d and data[left] < data[smallest]:
-            smallest = left
-     if right < d and data[right] < data[smallest]:
-            smallest = right
+    if left < d and data[left] < data[smallest]:
+           smallest = left
+    if right < d and data[right] < data[smallest]:
+           smallest = right
         
      if smallest != i:
         swaps.append((i, smallest))
