@@ -30,7 +30,7 @@ def main():
         assert len(data) == n
 
     if "F" in Input:
-        filepath = './test/'  #Setting up the filepath / file etc.
+        filepath = './tests/'  #Setting up the filepath / file etc.
         fails = input()
         folder = filepath + fails
         with open(folder, 'r') as file:
