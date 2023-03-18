@@ -27,15 +27,29 @@ def build_heap(data):
             
             
 def main():
+    Input_type = input()
+    if input_type == 'I':
+        n = int(input())
+        data = list(map(int, input().split()))
+        assert len(data) == n
+        
+        
+        
+        
+    elif input_type = 'F':
+        filepath = './tests/'
+        file = input()
+        folder = filepath + file
+        n = int(input())
+        data = list(map(int, input().split()))
+        assert len(data) == n
+        
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
     # input from keyboard
     
-    n = int(input())
-    data = list(map(int, input().split()))
     # checks if lenght of data is the same as the said lenght
-    assert len(data) == n
     # calls function to assess the data 
     # and give back all swaps
     swaps = build_heap(data)
