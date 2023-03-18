@@ -37,10 +37,10 @@ def main():
         filepath = './tests/'
         file = input()
         folder = filepath + file
-        #try:
-        n = int(input())
-        data = list(map(int, input().split()))
-        assert len(data) == n
+            with open(folder, 'r') as x:
+                n = int(x.readline().strip())
+                data = list(map(int, x.readline .split.strip()))
+                assert len(data) == n
                     
        # except Exception as ex:
            # print("Error:(", str(ex))
