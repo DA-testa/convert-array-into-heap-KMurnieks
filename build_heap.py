@@ -7,11 +7,11 @@ def build_heap(data):
         m = i
         # heapifying node i
         while True:  #Lai neieciklētos
-            left = 2 * m + 1
-            right = 2 * m + 2
+            left = 2*m+1  #Define left 
             min_inx = m
             if left < n and data[left] < data[min_inx]:  ##Sorting
                 min_inx = left
+            right = 2*m+2 #Define right
             if right < n and data[right] < data[min_inx]:##Sorting
                 min_inx = left
                 min_inx = right
