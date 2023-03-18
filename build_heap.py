@@ -11,9 +11,9 @@ def build_heap(data):
             right = 2 * j + 2
             min_inx = j
             if left < n and data[left] < data[min_inx]:
-                min_index = left
+                min_inx = left
             if right < n and data[right] < data[min_inx]:
-                min_index = right
+                min_inx = right
             if j != min_inx:
                 swaps.append((j, min_inx))
                 data[j], data[min_inx] = data[min_inx], data[j]
