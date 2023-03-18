@@ -19,7 +19,7 @@ def heaping(data, i, swaps):
 def build_heap(data):
     x = len(data)
     swaps = []
-    for i in range (x // 2-1, -1, -1):
+    for i in range (x // 2, -1, -1):
         swaps = swaps + heaping(data, i ,swaps)
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)                     
