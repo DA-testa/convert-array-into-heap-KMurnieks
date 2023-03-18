@@ -34,7 +34,7 @@ def main():
         assert len(data) == n
         
            
-    elif input_type == 'F':
+    elif Input_type == 'F':
         filepath = './tests/'
         file = input()
         folder = filepath + file
