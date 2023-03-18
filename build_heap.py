@@ -4,6 +4,7 @@ def heaping(data):
     swaps = []
     n = len(data)
     for i in range(n // 2 - 1, -1, -1):
+        j = i
         # heapifying node i
         while True:
             left = 2 * j + 1
