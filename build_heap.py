@@ -3,7 +3,7 @@
 def heaping(data, i, swaps):
     d = len(data)
     min_index = i
-    while true:
+    while True:
         left = 2*i +1
 
         if left < d and data[left] < data[min_index]:
