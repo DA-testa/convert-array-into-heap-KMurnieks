@@ -39,7 +39,6 @@ def main():
         file = input()
         folder = filepath + file
              try:
-                with open(folder) as x:
                     
                     n = int(input())
                     data = list(map(int, input().split()))
