@@ -22,14 +22,14 @@ def build_heap(data):
                 break
     return swaps
             
-def main():
-    Input = input()
+def main(): 
+    Input = input() #IEVADE MANUĀLI
     if "I" in Input:
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
 
-    if "F" in Input:
+    if "F" in Input:   #IEVADE
         filepath = "tests/" + input() 
         with open(filepath, 'r') as file:
             n = int(file.readline().strip())
