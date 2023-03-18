@@ -16,7 +16,7 @@ def build_heap(data):
                 min_index = right
             if j != min_inx:
                 swaps.append((j, min_inx))
-                data[j], data[min_index] = data[min_inx], data[j]
+                data[j], data[min_inx] = data[min_inx], data[j]
                 j = min_inx
             else:
                 break
