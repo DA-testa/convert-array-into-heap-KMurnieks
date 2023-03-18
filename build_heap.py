@@ -18,7 +18,7 @@ def heaping(data, i, swaps):
             heaping(data, min_index, swaps)
         else:
             break
-    return swaps
+    #return swaps
         
 def build_heap(data):
     x = len(data)
