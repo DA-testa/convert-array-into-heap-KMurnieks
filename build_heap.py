@@ -10,8 +10,8 @@ def heaping(data, i, swaps):
     if right < d and data[right] < data[min_index]:
         min_index = right
     
-    if i != min:
-        data[i], data[min] = data[min_index], data[i]
+    if i != min_index:
+        data[i], data[min_index] = data[min_index], data[i]
         swaps.append((i, min_index))
         heaping(data, min_index, swaps)
     return swaps
