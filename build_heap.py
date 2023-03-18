@@ -39,7 +39,7 @@ def main():
         folder = filepath + file
     with open(folder, 'r') as x:
         n = int(x.readline().strip())
-        data = list(map(int, x.readline .split.strip()))
+        data = list(map(int, x.readline .strip.split()))
         assert len(data) == n
                     
        # except Exception as ex:
