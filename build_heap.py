@@ -1,6 +1,19 @@
 # python3
-
-
+def heaping(data, i):
+    swaps = []
+    left = 2*i+1
+    right = 2 * i +2
+    smallest = i
+     if left < d and data[left] < data[smallest]:
+            smallest = left
+     if right < d and data[right] < data[smallest]:
+            smallest = right
+        
+     if smallest != i:
+        swaps.append((i, smallest))
+        data[i], data[smallest] = data[smallest], data[i]
+        swamps = swaps + heaping(data, smallest)
+        
 def build_heap(data):
     d = len(data)
     swaps = []
@@ -9,23 +22,6 @@ def build_heap(data):
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
     return swaps
-    
-    def heaping(data, i):
-        swaps = []
-        left = 2*i+1
-        right = 2 * i +2
-        smallest = i
-        if left < d and data[left] < data[smallest]:
-            smallest = left
-        if right < d and data[right] < data[smallest]:
-            smallest = right
-        
-        if smallest != i:
-            swaps.append((i, smallest))
-            data[i], data[smallest] = data[smallest], data[i]
-            swamps = swaps + heaping(data, smallest)
-            
-        return swaps
             
             
 def main():
