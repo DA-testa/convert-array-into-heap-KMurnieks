@@ -34,12 +34,10 @@ def main():
         assert len(data) == n
 
     elif "F" in Input:
-        filepath = "tests/"
-        file = input()
-        folder = filepath + file
-        with open(folder, 'r') as z:
-            n = int(z.readline().strip())
-            data = list(map(int, z.readline().strip().split()))
+        filepath = "tests/" + input();
+        with open(filepath, 'r') as file:
+            n = int(file.readline().strip())
+            data = list(map(int, file.readline().strip().split()))
             assert len(data) == n
                     
        # except Exception as ex:
