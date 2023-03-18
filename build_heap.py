@@ -24,11 +24,6 @@ def build_heap(data):
         swaps = swaps + heaping(data, i ,swaps)
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
-    swaps_final = []
-    for i in range(len(swaps)):
-        k, j = swaps[i]
-        swaps_final.append((n-1-k, n-1-j))
-    
     return swaps
             
             
