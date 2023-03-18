@@ -4,10 +4,10 @@ def heaping(data, i, swaps):
     d = len(data)
     min_index = i
     left = 2*i +1
-    if left < d and data[left] < data[min_index]:
+    if left < d and data[left] > data[min_index]:
         min_index = left
     right = 2*i + 2
-    if right < d and data[right] < data[min_index]:
+    if right < d and data[right] > data[min_index]:
         min_index = right
     
     if i != min_index:
