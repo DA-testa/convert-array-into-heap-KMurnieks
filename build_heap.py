@@ -22,12 +22,7 @@ def build_heap(data):
     for i in range (x // 2-1, -1, -1):
         swaps = swaps + heaping(data, i ,swaps)
     # TODO: Creat heap and heap sort
-    # try to achieve  O(n) and not O(n2)
-    
-    for i in range (x - 1, 0, -1):
-        data[0], data[i] = data[i], data[0]
-        swaps.append((0,i))
-        heaping(data, 0 , swaps)                        
+    # try to achieve  O(n) and not O(n2)                     
     return swaps
             
             
