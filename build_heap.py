@@ -32,21 +32,19 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
-        
-           
+
     elif "F" in Input:
         filepath = './tests/'
         file = input()
         folder = filepath + file
-            try:
-                n = int(input())
-                data = list(map(int, input().split()))
-                assert len(data) == n
+        try:
+            n = int(input())
+            data = list(map(int, input().split()))
+            assert len(data) == n
                     
-                    
-            except Exception as ex:
-                print("Error:(", str(ex))
-                return
+        except Exception as ex:
+            print("Error:(", str(ex))
+            return
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
