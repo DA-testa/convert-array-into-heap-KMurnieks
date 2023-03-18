@@ -14,6 +14,7 @@ def heaping(data, i, swaps):
         data[i], data[max] = data[max], data[i]
         swaps.append((i, max))
         heaping(data, max, swaps)
+    return swaps
         
 def build_heap(data):
     d = len(data)
