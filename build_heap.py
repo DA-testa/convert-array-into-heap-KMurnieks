@@ -36,7 +36,7 @@ def main():
         
         
         
-    elif input_type = 'F':
+    elif input_type == 'F':
         filepath = './tests/'
         file = input()
         folder = filepath + file
