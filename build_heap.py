@@ -2,16 +2,16 @@
 #Kristaps Mūrnieks 221RDB173
 def heaping(data, i, swaps):
     d = len(data)
-    max = i
+    min = i
     left = 2*i +1
-    if left < d and data[left] < data [max]:
+    if left < d and data[left] > data [min]:
         max = left
     right = 2*i + 2
-    if right < d and data [right] < data [max]:
+    if right < d and data [right] < data [min]:
         max = right
     
-    if i != max:
-        data[i], data[max] = data[max], data[i]
+    if i != min:
+        data[i], data[min] = data[min], data[i]
         swaps.append((i, max))
         heaping(data, max, swaps)
     return swaps
