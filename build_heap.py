@@ -38,13 +38,13 @@ def main():
         filepath = './tests/'
         file = input()
         folder = filepath + file
-             try:
-                    n = int(input())
-                    data = list(map(int, input().split()))
-                    assert len(data) == n
+            try:
+                n = int(input())
+                data = list(map(int, input().split()))
+                assert len(data) == n
                     
                     
-             except Exception as ex:
+            except Exception as ex:
                 print("Error:(", str(ex))
                 return
     # TODO : add input and corresponding checks
