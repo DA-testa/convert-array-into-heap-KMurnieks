@@ -4,10 +4,10 @@ def heaping(data, i, swaps):
     d = len(data)
     min = i
     left = 2*i +1
-    if left < d and data[left] > data [min]:
+    if left < d and data[left] < data[min]:
         min = left
     right = 2*i + 2
-    if right < d and data [right] > data [min]:
+    if right < d and data [right] < data[min]:
         min = right
     
     if i != min:
@@ -23,6 +23,11 @@ def build_heap(data):
         swaps = swaps + heaping(data, i ,swaps)
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
+    
+    for i in range (x - 1, 0, -1):
+        data[0], data[i] = data[i, data[0]
+        swaps.append((0,i))
+        heaping(data, 0 , swaps)                        
     return swaps
             
             
