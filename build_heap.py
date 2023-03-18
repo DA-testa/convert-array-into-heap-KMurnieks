@@ -9,15 +9,15 @@ def build_heap(data):
         while True:
             left = 2 * j + 1
             right = 2 * j + 2
-            min_index = j
-            if left < n and data[left] < data[min_index]:
+            min_inx = j
+            if left < n and data[left] < data[min_inx]:
                 min_index = left
-            if right < n and data[right] < data[min_index]:
+            if right < n and data[right] < data[min_inx]:
                 min_index = right
-            if j != min_index:
-                swaps.append((j, min_index))
-                data[j], data[min_index] = data[min_index], data[j]
-                j = min_index
+            if j != min_inx:
+                swaps.append((j, min_inx))
+                data[j], data[min_index] = data[min_inx], data[j]
+                j = min_inx
             else:
                 break
     return swaps
@@ -30,8 +30,10 @@ def main():
         assert len(data) == n
 
     if "F" in Input:
-        filepath = "tests/" + input();
-        with open(filepath, 'r') as file:
+        filepath = './test/'  #Setting up the filepath / file etc.
+        fails = input()
+        folder = filepath + fails
+        with open(folder, 'r') as file:
             n = int(file.readline().strip())
             data = list(map(int, file.readline().strip().split()))
             assert len(data) == n
