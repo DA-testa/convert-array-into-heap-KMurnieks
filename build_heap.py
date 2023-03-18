@@ -51,6 +51,7 @@ def main():
     # checks if lenght of data is the same as the said lenght
     # calls function to assess the data 
     # and give back all swaps
+    assert data is None
     swaps = build_heap(data)
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
