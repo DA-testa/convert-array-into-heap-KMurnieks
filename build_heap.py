@@ -23,7 +23,7 @@ def build_heap(data):
         if smallest != i:
             swaps.append((i, smallest))
             data[i], data[smallest] = data[smallest], data[i]
-            swamps = swaps heaping(data, smallest)
+            swamps = swaps + heaping(data, smallest)
             
         return swaps
             
